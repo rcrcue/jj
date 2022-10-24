@@ -9,15 +9,30 @@
 
 from typing import Union
 
-from pyrogram.types import InlineKeyboardButton
+from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
-from config import GITHUB_REPO, SUPPORT_CHANNEL, SUPPORT_GROUP
 from YukkiMusic import app
 
 
-def start_pannel(_):
-    buttons = [
+def help_pannel(_, START: Union[bool, int] = None):
+    first = [
+        InlineKeyboardButton(
+            text=_["CLOSEMENU_BUTTON"], callback_data=f"close"
+        )
+    ]
+    second = [
+        InlineKeyboardButton(
+            text=_["START_COMMAND"],
+            callback_data=f"settingsback_helper",
+        ),
+        InlineKeyboardButton(
+            text=_["CLOSEMENU_BUTTON"], callback_data=f"close"
+        ),
+    ]
+    mark = second if START else first
+    upl = InlineKeyboardMarkup(
         [
+            [
             InlineKeyboardButton(
                 text=_["S_B_1"],
                 url=f"https://t.me/{app.username}?start=help",
