@@ -22,7 +22,6 @@ from config import GITHUB_REPO, SUPPORT_CHANNEL, SUPPORT_GROUP
 
 from YukkiMusic import app
 
-    ]
 
     second = [
 
