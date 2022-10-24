@@ -34,12 +34,12 @@ def help_pannel(_, START: Union[bool, int] = None):
         [
             [
                 InlineKeyboardButton(
-                    text=_["S_B_8"],
-                    callback_data="settings_back_helper",
+                    text=_["H_B_1"],
+                    callback_data="help_callback hb1",
                 ),
                 InlineKeyboardButton(
-                    text=_["S_B_7"],
-                    url=f"{GITHUB_REPO}"
+                    text=_["H_B_2"],
+                    callback_data="help_callback hb2",
                 ),
             ],
             [
@@ -86,7 +86,7 @@ def private_help_panel(_):
         [
             InlineKeyboardButton(
                 text=_["S_B_1"],
-                url=f"https://t.me/{app.username}?help=start",
+                url=f"https://t.me/{app.username}?start=help",
             ),
         ],
     ]
