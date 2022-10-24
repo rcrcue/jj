@@ -22,19 +22,6 @@ from config import GITHUB_REPO, SUPPORT_CHANNEL, SUPPORT_GROUP
 
 from YukkiMusic import app
 
-
-    second = [
-
-        InlineKeyboardButton(
-
-            text=_["START_COMMAND"],
-
-            callback_data=f"settingsback_helper",
-
-        ),
-
-        
-
 def start_pannel(_):
 
     buttons = [
