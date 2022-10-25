@@ -69,7 +69,7 @@ def help_back_markup(_):
         [
             [
                 InlineKeyboardButton(
-                    text=_["S_B_7"],
+                    text=_["BACK_BUTTON"],
                     callback_data=f"settings_back_helper",
                 ),
                 InlineKeyboardButton(
